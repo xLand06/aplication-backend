@@ -20,7 +20,7 @@ router.post("/payments", (req, res) => {
   res.json({ message });
 });
 
-router.delete("payment./:id"),
+router.delete("payment/:id"),
   (req, res) => {
     res.send("eliminated payment");
   };

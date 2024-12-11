@@ -13,14 +13,14 @@ const loginControllers = () => {
     });
 
     if (!userFound) {
-      return { message: "Este correo no esta vinculado a ningun usuario" };
+      return { message: "This email is not associated with any account" };
     }
 
     if (!correctPassword) {
-      return { message: "la contraseña no es correcta" };
+      return { message: "Incorrect Password" };
     }
 
-    return { message: "Inició sesión correctamente" };
+    return { mesage: "You have successfully logged in" };
   };
   return { verifyLogin };
 };

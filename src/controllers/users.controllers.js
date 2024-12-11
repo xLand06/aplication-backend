@@ -34,8 +34,8 @@ const usersControllers = () => {
       }
     });
 
-    if (userFound) return { user: user, message: "Usuario encontrado" };
-    else return { user: null, message: "usuario no encontrado" };
+    if (userFound) return { user: user, message: "User found" };
+    else return { user: null, message: "usuario not found" };
   };
 
   const postUsers = (user) => {

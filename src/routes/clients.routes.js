@@ -3,7 +3,7 @@ import clientsControllers from "../controllers/clients.controller.js";
 
 const router = Router();
 
-router.get("/users", async (req, res) => {
+router.get("/clients", async (req, res) => {
   const clients = await clientsControllers().getClients();
   res.json(clients);
 });
@@ -20,7 +20,7 @@ router.post("/clients", (req, res) => {
   res.json({ message });
 });
 
-router.delete("clients./:id"),
+router.delete("clients/:id"),
   (req, res) => {
     res.send("Deleted Client");
   };

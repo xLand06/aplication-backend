@@ -20,14 +20,14 @@ router.post("/users", (req, res) => {
   res.json({ message });
 });
 
-router.delete("users./:id"),
+router.delete("users/:id"),
   (req, res) => {
-    res.send("Eliminando Usuario");
+    res.send("Eliminated user");
   };
 
 router.put("users/:id"),
   (req, res) => {
-    res.send("Editando Usuarios");
+    res.send("Edited user");
   };
 
 export default router;

@@ -31,8 +31,8 @@ const paymentsControllers = () => {
         paymentFound = true;
       }
     });
-    if (paymentFound) return { payment: payment, message: "Pago Encontrado" };
-    else return { payment: null, message: "Pago no ha sido encontrado" };
+    if (paymentFound) return { payment: payment, message: "Payment Found" };
+    else return { payment: null, message: "Payment not Found" };
   };
 
   const postPayments = (payment) => {

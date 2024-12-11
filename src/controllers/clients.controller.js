@@ -33,13 +33,12 @@ const clientsControllers = () => {
       }
     });
 
-    if (clientFound) return { client: client, message: "Cliente encontrado" };
-    else return { client: null, message: "Cliente no encontrado" };
+    if (clientFound) return { client: client, message: "Client Found" };
+    else return { client: null, message: "Client not Found" };
   };
 
   const postClients = (client) => {
     let clientFound = false;
-
     data.clients.map((item) => {
       if (item.clientId === client.clientId) clientFound = true;
     });
@@ -56,8 +55,3 @@ const clientsControllers = () => {
 };
 
 export default clientsControllers;
-
-/*
-CORRECIONES
-METODO POST AGREGA ClientBase, PERO METODO GET 
-NO BUSCA NADA */
