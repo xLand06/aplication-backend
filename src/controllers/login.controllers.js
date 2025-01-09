@@ -20,7 +20,7 @@ const loginControllers = () => {
       return { message: "Incorrect Password" };
     }
 
-    return { mesage: "You have successfully logged in" };
+    return { message: "You have successfully logged in" };
   };
   return { verifyLogin };
 };

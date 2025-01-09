@@ -20,6 +20,8 @@ router.post("/users", (req, res) => {
   res.json({ message });
 });
 
+//router.post("/users", usersControllers().postUsers);
+
 router.delete("users/:id"),
   (req, res) => {
     res.send("Eliminated user");
