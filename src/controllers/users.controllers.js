@@ -1,4 +1,4 @@
-import { data } from "../database/data.js";
+/*import { data } from "../database/data.js";
 
 const usersControllers = () => {
   const getUsers = () => {
@@ -56,4 +56,40 @@ const usersControllers = () => {
   return { getUsers, postUsers, getUserId };
 };
 
-export default usersControllers;
+export default usersControllers;*/
+
+import { userModel } from "../models/user.model.js";
+
+const register = async (req, res) => {
+  try {
+    console.log(req.body);
+    const { email, username, password } = req.body;
+
+    return res.json({
+      ok: true,
+      msg: "user ok",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      ok: false,
+      msg: "Error en el server",
+    });
+  }
+};
+
+const login = async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      ok: false,
+      msg: "Error en el server",
+    });
+  }
+};
+
+export const userController = {
+  register,
+  login,
+};

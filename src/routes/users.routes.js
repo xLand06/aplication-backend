@@ -1,9 +1,7 @@
 import { Router } from "express";
-import usersControllers from "../controllers/users.controllers.js";
+import { userController } from "../controllers/users.controllers.js";
 
-const router = Router();
-
-router.get("/users", async (req, res) => {
+/* router.get("/users", async (req, res) => {
   const users = await usersControllers().getUsers();
   res.json(users);
 });
@@ -31,5 +29,11 @@ router.put("users/:id"),
   (req, res) => {
     res.send("Edited user");
   };
+*/
+
+const router = Router();
+
+router.post("/register", userController.register);
+router.post("/login", userController.login);
 
 export default router;
